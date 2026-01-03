@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- 徽章底色 -->
+    <solid android:color="@color/gray_light" />
+    <!-- 徽章边框 -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/primary_green_light" />
+    <!-- 徽章大小 -->
+    <size
+        android:width="48dp"
+        android:height="48dp" />
+</shape>

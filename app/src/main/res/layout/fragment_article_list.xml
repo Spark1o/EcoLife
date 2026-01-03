@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_light"
+    android:padding="12dp">
+
+    <!-- 直接显示文章列表，移除所有标题 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:spacing="10dp"
+            android:padding="4dp">
+
+            <!-- 文章项1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="@drawable/article_item_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="28dp"
+                    android:background="@color/primary_green"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="什么是低碳生活？这几个小技巧帮你轻松实现"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="发布时间：2025-12-01 | 阅读量：1258"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_medium"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text=">"
+                    android:textSize="20sp"
+                    android:textColor="@color/gray_medium"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- 文章项2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="@drawable/article_item_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="28dp"
+                    android:background="@color/primary_green"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="垃圾分类指南：不同城市的分类标准差异"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="发布时间：2025-11-28 | 阅读量：987"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_medium"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text=">"
+                    android:textSize="20sp"
+                    android:textColor="@color/gray_medium"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- 文章项3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="@drawable/article_item_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="28dp"
+                    android:background="@color/primary_green"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="家庭节能减排的10个实用方法"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="发布时间：2025-11-20 | 阅读量：1560"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_medium"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text=">"
+                    android:textSize="20sp"
+                    android:textColor="@color/gray_medium"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- 文章项4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="@drawable/article_item_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="28dp"
+                    android:background="@color/primary_green"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="自然保护区的作用：守护生物多样性"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="发布时间：2025-11-15 | 阅读量：892"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_medium"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text=">"
+                    android:textSize="20sp"
+                    android:textColor="@color/gray_medium"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

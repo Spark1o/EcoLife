@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 辅助色：浅蓝（代表生态） -->
+    <color name="accent_blue">#FF29B6F6</color>
+
+    <!-- 中性色 -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#FF9800</color> <!-- 橙色（Material Design标准色） -->
+    <color name="blue">#2196F3</color>   <!-- 蓝色（Material Design标准色） -->
+    <color name="recyclable">#2196F3</color>      <!-- 可回收物-蓝色 -->
+    <color name="kitchen_waste">#4CAF50</color>   <!-- 厨余垃圾-绿色 -->
+    <color name="hazardous_waste">#FF5252</color> <!-- 有害垃圾-红色 -->
+    <color name="other_waste">#9E9E9E</color>     <!-- 其他垃圾-灰色 -->
+    <color name="red">#FF5252</color> <!-- 鲜艳的红色，适合错误提示 -->
+    <color name="eco_green_primary">#4CAF50</color>
+    <color name="eco_green_secondary">#81C784</color>
+    <color name="eco_green_dark">#2E7D32</color>
+
+    <color name="primary_green">#4CAF50</color>
+    <color name="primary_green_light">#E8F5E9</color>
+    <color name="primary_green_dark">#2E7D32</color>
+
+    <!-- 文本和背景色 -->
+    <color name="gray_dark">#212121</color>
+    <color name="gray_medium">#757575</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="background_gray_light">#FAFAFA</color>
+
+    <!-- 文本和背景色 -->
+    <color name="eco_gray_dark">#212121</color>
+    <color name="eco_gray_medium">#757575</color>
+    <color name="eco_gray_light">#E0E0E0</color>
+    <color name="background_eco_light">#F5F7F5</color>
+    <color name="eco_red">#FF4444</color>
+    <!-- 控件背景色 -->
+    <color name="chart_bg_light">#FAFAFA</color>
+    <color name="hint_bg_color">#F8F8F8</color>
+
+    <color name="primary_green_light_alpha">#1A81C784</color>
+
+
+    <!-- 灰色调扩展 -->
+    <color name="gray_ultra_light">#F5F7F9</color>
+
+</resources>

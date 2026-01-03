@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ultra_light"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="16dp"
+    android:overScrollMode="never"
+    android:scrollbarStyle="outsideOverlay">
+
+    <!-- 主容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:spacing="20dp">
+
+        <!-- 页面标题区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="环保社区"
+                android:textSize="28sp"
+                android:textColor="@color/gray_dark"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享环保点滴，共建绿色家园"
+                android:textSize="15sp"
+                android:textColor="@color/gray_medium"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-light"/>
+        </LinearLayout>
+
+        <!-- 发布入口卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardMaxElevation="6dp">
+
+            <LinearLayout
+                android:id="@+id/ll_publish_entry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <!-- 头像 -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:tint="@color/primary_green"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_bg"/>
+
+                <!-- 提示文字 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="分享你的环保生活..."
+                    android:textSize="16sp"
+                    android:textColor="@color/gray_medium"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:fontFamily="sans-serif-light"/>
+
+                <!-- 箭头图标 -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_right"
+                    android:tint="@color/gray_medium"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 动态列表标题栏 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="社区动态"
+                android:textSize="18sp"
+                android:textColor="@color/gray_dark"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gray_light"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"/>
+        </LinearLayout>
+
+        <!-- 动态列表容器 -->
+        <LinearLayout
+            android:id="@+id/ll_dynamic_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:spacing="12dp">
+
+            <!-- 动态项1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardMaxElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- 用户信息行 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:src="@mipmap/ic_launcher"
+                            android:tint="@color/primary_green_light"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/circle_bg"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginRight="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="环保小达人"
+                                android:textSize="16sp"
+                                android:textColor="@color/gray_dark"
+                                android:textStyle="bold"
+                                android:fontFamily="sans-serif-medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2小时前"
+                                android:textSize="12sp"
+                                android:textColor="@color/gray_medium"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="sans-serif-light"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_more"
+                            android:tint="@color/gray_medium"/>
+                    </LinearLayout>
+
+                    <!-- 动态内容 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="今天用洗菜水浇花，不仅节约了1桶水，花草也长得更茂盛了～🌿"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="sans-serif"/>
+
+                    <!-- 互动操作区 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="16dp">
+
+                        <!-- 点赞 -->
+                        <LinearLayout
+                            android:id="@+id/ll_like_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+                            <!-- 新增：点赞图标ID -->
+                            <ImageView
+                                android:id="@+id/iv_like_icon_1"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_like"
+                                android:tint="@color/gray_medium"/>
+
+                            <!-- 新增：点赞数ID -->
+                            <TextView
+                                android:id="@+id/tv_like_count_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" 28"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_medium"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:fontFamily="sans-serif-light"/>
+                        </LinearLayout>
+
+                        <!-- 评论 -->
+                        <LinearLayout
+                            android:id="@+id/ll_comment_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_comment"
+                                android:tint="@color/gray_medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" 5"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_medium"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:fontFamily="sans-serif-light"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <!-- 分享 -->
+                        <LinearLayout
+                            android:id="@+id/ll_share_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_share"
+                                android:tint="@color/gray_medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" 分享"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_medium"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:fontFamily="sans-serif-light"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 动态项2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardMaxElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- 用户信息行 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:src="@mipmap/ic_launcher"
+                            android:tint="@color/primary_green"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/circle_bg"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginRight="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="低碳生活家"
+                                android:textSize="16sp"
+                                android:textColor="@color/gray_dark"
+                                android:textStyle="bold"
+                                android:fontFamily="sans-serif-medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="昨天 18:30"
+                                android:textSize="12sp"
+                                android:textColor="@color/gray_medium"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="sans-serif-light"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_more"
+                            android:tint="@color/gray_medium"/>
+                    </LinearLayout>
+
+                    <!-- 动态内容 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="本周累计减少10kgCO₂排放，通勤全部选择骑行+公交，为地球减负，也收获了健康～🚲"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="sans-serif"/>
+
+                    <!-- 互动操作区 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="16dp">
+
+                        <!-- 点赞（已点赞状态） -->
+                        <LinearLayout
+                            android:id="@+id/ll_like_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+                            <!-- 新增：点赞图标ID -->
+                            <ImageView
+                                android:id="@+id/iv_like_icon_2"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_like"
+                                android:tint="@color/primary_green"/>
+
+                            <!-- 新增：点赞数ID -->
+                            <TextView
+                                android:id="@+id/tv_like_count_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" 45"
+                                android:textSize="14sp"
+                                android:textColor="@color/primary_green"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:fontFamily="sans-serif-light"/>
+                        </LinearLayout>
+
+                        <!-- 评论 -->
+                        <LinearLayout
+                            android:id="@+id/ll_comment_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_comment"
+                                android:tint="@color/gray_medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" 12"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_medium"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:fontFamily="sans-serif-light"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <!-- 分享 -->
+                        <LinearLayout
+                            android:id="@+id/ll_share_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_share"
+                                android:tint="@color/gray_medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" 分享"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_medium"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:fontFamily="sans-serif-light"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- 空状态视图 -->
+        <LinearLayout
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="40dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
+                android:tint="@color/gray_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无社区动态"
+                android:textSize="16sp"
+                android:textColor="@color/gray_medium"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快来发布第一条动态吧～"
+                android:textSize="14sp"
+                android:textColor="@color/gray_light"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-light"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

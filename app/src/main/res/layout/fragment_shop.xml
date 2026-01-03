@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_light"
+    android:padding="16dp">
+
+    <!-- 标题 -->
+
+    <!-- 新增：积分展示栏（核心修复：添加tv_user_score ID） -->
+    <TextView
+        android:id="@+id/tv_user_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前积分：0"
+        android:textSize="16sp"
+        android:textColor="@color/primary_green"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 商品列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

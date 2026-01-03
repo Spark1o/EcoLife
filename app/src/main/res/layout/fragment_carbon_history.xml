@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:orientation="vertical">
+
+    <!-- 顶部标题栏（圆角+阴影） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <!-- 返回按钮 -->
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:tint="#3366CC"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- 标题文本 -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="碳足迹历史记录"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <!-- 清空按钮（圆角+渐变） -->
+        <Button
+            android:id="@+id/btn_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_clear_bg"
+            android:text="清空所有"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:includeFontPadding="false"/>
+    </LinearLayout>
+
+    <!-- 空数据提示 -->
+    <TextView
+        android:id="@+id/tv_empty_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无碳足迹记录\n快去添加吧～"
+        android:textColor="#999999"
+        android:textSize="16sp"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <!-- 历史记录列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_carbon_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        tools:listitem="@layout/item_carbon_history"/>
+
+</LinearLayout>

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:padding="16dp"
+    android:overScrollMode="always"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:spacing="20dp"
+        android:paddingBottom="30dp">
+
+        <!-- 顶部标题与积分 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="环保挑战任务"
+                android:textSize="24sp"
+                android:textColor="@color/gray_dark"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="none"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的积分："
+                    android:textSize="16sp"
+                    android:textColor="@color/gray_dark"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textColor="@color/primary_green"
+                    android:textStyle="bold"
+                    android:layout_marginStart="4dp"
+                    android:minWidth="40dp"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 每日任务卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="每日任务"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_dark"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
+                    android:maxLines="1"/>
+
+                <!-- 任务项1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:paddingHorizontal="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_task1_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="记录1次碳足迹数据"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:maxLines="1"
+                        android:ellipsize="none"/>
+
+                    <Button
+                        android:id="@+id/btn_task1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:text="未完成"
+                        android:backgroundTint="@color/gray_light"
+                        android:textColor="@color/gray_dark"
+                        android:paddingHorizontal="20dp"
+                        android:minWidth="90dp"
+                        android:maxLines="1"
+                        app:cornerRadius="19dp"
+                        android:elevation="2dp"/>
+                </LinearLayout>
+
+                <!-- 任务项2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:paddingHorizontal="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_task2_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="查询1次垃圾分类"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:maxLines="1"
+                        android:ellipsize="none"/>
+
+                    <Button
+                        android:id="@+id/btn_task2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:text="未完成"
+                        android:backgroundTint="@color/gray_light"
+                        android:textColor="@color/gray_dark"
+                        android:paddingHorizontal="20dp"
+                        android:minWidth="90dp"
+                        android:maxLines="1"
+                        app:cornerRadius="19dp"
+                        android:elevation="2dp"/>
+                </LinearLayout>
+
+                <!-- 任务项3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_task3_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="发布1条环保动态"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:maxLines="1"
+                        android:ellipsize="none"/>
+
+                    <Button
+                        android:id="@+id/btn_task3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:text="未完成"
+                        android:backgroundTint="@color/gray_light"
+                        android:textColor="@color/gray_dark"
+                        android:paddingHorizontal="20dp"
+                        android:minWidth="90dp"
+                        android:maxLines="1"
+                        app:cornerRadius="19dp"
+                        android:elevation="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 每周任务卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="每周任务"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_dark"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
+                    android:maxLines="1"/>
+
+                <!-- 任务描述与按钮 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:paddingHorizontal="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_week_task_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="本周减少5kgCO₂排放"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:maxLines="1"
+                        android:ellipsize="none"/>
+
+                    <Button
+                        android:id="@+id/btn_week_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:text="进行中"
+                        android:backgroundTint="@color/primary_green_light"
+                        android:textColor="@color/primary_green"
+                        android:paddingHorizontal="20dp"
+                        android:minWidth="90dp"
+                        android:maxLines="1"
+                        app:cornerRadius="19dp"
+                        android:elevation="2dp"/>
+                </LinearLayout>
+
+                <!-- 进度条区域 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:spacing="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_week_task_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前进度：0/5kg CO₂"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_medium"
+                        android:maxLines="1"/>
+
+                    <ProgressBar
+                        android:id="@+id/pb_week_task"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:progress="0"
+                        android:max="500"
+                        android:progressTint="@color/primary_green"
+                        android:backgroundTint="@color/gray_light"
+                        android:progressDrawable="@drawable/custom_progress_bar"/>
+
+                    <TextView
+                        android:id="@+id/tv_week_carbon_reduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="本周已减少：0.0kg CO₂"
+                        android:textSize="14sp"
+                        android:textColor="@color/primary_green"
+                        android:maxLines="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 成就徽章卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的成就"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_dark"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
+                    android:maxLines="1"/>
+
+                <!-- 成就网格（修改weightSum为5，新增成就5） -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:spacing="12dp">
+
+                    <!-- 成就1 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:spacing="6dp">
+
+                        <ImageView
+                            android:id="@+id/iv_achievement1"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/ic_achievement_carbon"
+                            android:tint="@color/gray_light"
+                            android:background="@drawable/badge_bg"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:id="@+id/tv_achievement1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="环保新手"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray_medium"
+                            android:maxLines="1"
+                            android:gravity="center_horizontal"
+                            android:minWidth="50dp"/>
+                    </LinearLayout>
+
+                    <!-- 成就2 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:spacing="6dp">
+
+                        <ImageView
+                            android:id="@+id/iv_achievement2"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/ic_achievement_garbage"
+                            android:tint="@color/gray_light"
+                            android:background="@drawable/badge_bg"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:id="@+id/tv_achievement2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="分类达人"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray_medium"
+                            android:maxLines="1"
+                            android:gravity="center_horizontal"
+                            android:minWidth="50dp"/>
+                    </LinearLayout>
+
+                    <!-- 成就3 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:spacing="6dp">
+
+                        <ImageView
+                            android:id="@+id/iv_achievement3"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/ic_achievement_point"
+                            android:tint="@color/gray_light"
+                            android:background="@drawable/badge_bg"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:id="@+id/tv_achievement3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="积分小富翁"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray_medium"
+                            android:maxLines="1"
+                            android:gravity="center_horizontal"
+                            android:minWidth="50dp"/>
+                    </LinearLayout>
+
+                    <!-- 成就4 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:spacing="6dp">
+
+                        <ImageView
+                            android:id="@+id/iv_achievement4"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/ic_achievement_week"
+                            android:tint="@color/gray_light"
+                            android:background="@drawable/badge_bg"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:id="@+id/tv_achievement4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="周任务达人"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray_medium"
+                            android:maxLines="1"
+                            android:gravity="center_horizontal"
+                            android:minWidth="50dp"/>
+                    </LinearLayout>
+
+                    <!-- 新增：成就5（动态发布者） -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:spacing="6dp">
+
+                        <ImageView
+                            android:id="@+id/iv_achievement5"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/ic_achievement_dynamic"
+                            android:tint="@color/gray_light"
+                            android:background="@drawable/badge_bg"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:id="@+id/tv_achievement5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="动态发布者"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray_medium"
+                            android:maxLines="1"
+                            android:gravity="center_horizontal"
+                            android:minWidth="50dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 成就提示 -->
+                <TextView
+                    android:id="@+id/tv_achievement_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="完成任务解锁更多成就徽章"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_medium"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:maxLines="1"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

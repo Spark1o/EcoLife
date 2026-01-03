@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 评论图标（对话气泡样式） -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M20,2H4A2,2 0 0,0 2,4v18l4-4H20A2,2 0 0,0 22,18V4A2,2 0 0,0 20,2M6,9h12v2H6V9m8,5H6v-2h8v2m4-6H6V6h12v2z"/>
+</vector>

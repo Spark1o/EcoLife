@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Fragment容器：默认显示欢迎界面，点击按钮后替换为Fragment -->
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/gray_light">
+
+        <!-- 初始欢迎界面 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/ic_launcher"
+                android:tint="@color/primary_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="环保生活"
+                android:textSize="28sp"
+                android:textColor="@color/gray_dark"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一起践行低碳生活，守护绿色地球"
+                android:textSize="16sp"
+                android:textColor="@color/gray_medium"
+                android:layout_marginTop="8dp" />
+
+            <!-- 点击跳转到碳足迹Fragment -->
+            <Button
+                android:id="@+id/btn_enter_carbon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始记录碳足迹"
+                android:backgroundTint="@color/primary_green"
+                android:textColor="@color/white"
+                android:layout_marginTop="32dp"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="12dp"
+                app:cornerRadius="24dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 底部导航 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_bottom_nav"
+        app:elevation="8dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/nav_color_selector"
+        app:itemTextColor="@color/nav_color_selector"
+        app:itemRippleColor="@color/primary_green_light"
+        app:labelVisibilityMode="labeled" />
+
+</LinearLayout>

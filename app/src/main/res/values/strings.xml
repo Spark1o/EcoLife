@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">环保生活</string>
+    <string name="carbon_footprint">碳足迹</string>
+    <string name="garbage_classify">垃圾分类</string>
+    <string name="challenge_task">挑战任务</string>
+    <string name="community">社区</string>
+</resources>

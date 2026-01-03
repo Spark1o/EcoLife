@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <!-- 页面标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="垃圾分类查询"
+            android:textSize="24sp"
+            android:textColor="@color/gray_dark"
+            android:textStyle="bold" />
+
+        <!-- 搜索框卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 搜索输入框 -->
+                <EditText
+                    android:id="@+id/et_garbage_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入垃圾名称（如：塑料瓶、电池）"
+                    android:background="@drawable/et_bg"
+                    android:padding="12dp"
+                    android:textColorHint="@color/gray_medium" />
+
+                <!-- 搜索按钮 -->
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="查询分类"
+                    android:backgroundTint="@color/primary_green"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="12dp"
+                    app:cornerRadius="12dp" />
+
+                <!-- 搜索结果展示 -->
+                <LinearLayout
+                    android:id="@+id/ll_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="查询结果："
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark" />
+
+                    <TextView
+                        android:id="@+id/tv_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/primary_green"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 垃圾分类指南卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="垃圾分类指南"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_dark"
+                    android:textStyle="bold" />
+
+                <!-- 可回收物 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="♻️ 可回收物"
+                        android:textSize="16sp"
+                        android:textColor="#FF4CAF50" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="定义：适宜回收利用和资源化利用的生活废弃物。"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_dark"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="例子：纸类、塑料、玻璃、金属、织物等。"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_medium"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <!-- 厨余垃圾 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥬 厨余垃圾"
+                        android:textSize="16sp"
+                        android:textColor="#FF8BC34A" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="定义：易腐烂的生物质生活废弃物。"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_dark"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="例子：剩菜剩饭、果皮、蔬菜叶、肉类废弃物等。"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_medium"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <!-- 有害垃圾 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚠️ 有害垃圾"
+                        android:textSize="16sp"
+                        android:textColor="#FFF44336" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="定义：含有对人体健康或者环境造成危害的物质。"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_dark"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="例子：电池、灯管、药品、油漆、化妆品等。"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_medium"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <!-- 其他垃圾 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🗑️ 其他垃圾"
+                        android:textSize="16sp"
+                        android:textColor="#FF9E9E9E" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="定义：除可回收物、厨余垃圾、有害垃圾外的其他生活废弃物。"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_dark"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="例子：卫生纸、塑料袋、一次性餐具、烟头等。"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_medium"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

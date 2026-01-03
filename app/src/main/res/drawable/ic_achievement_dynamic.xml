@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- 背景圆形（浅色） -->
+    <path
+        android:fillColor="#F5F5F5"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2z"/>
+
+    <!-- 核心图标：纸张+箭头（代表发布动态） -->
+    <!-- 纸张轮廓（填充部分） -->
+    <path
+        android:fillColor="#009688"
+        android:pathData="M14,4h-4v5c0,0.55 0.45,1 1,1h2c0.55,0 1,-0.45 1,-1V4z"/>
+
+    <!-- 纸张轮廓（描边部分：移除错误的fillColor，只保留stroke） -->
+    <path
+        android:strokeWidth="1.5"
+        android:strokeColor="#009688"
+        android:pathData="M14,9v2c0,1.1 -0.9,2 -2,2h-2c-1.1,0 -2,-0.9 -2,-2V9c0,-1.1 0.9,-2 2,-2h2C13.1,7 14,7.9 14,9z"/>
+
+    <!-- 发布箭头 -->
+    <path
+        android:fillColor="#009688"
+        android:pathData="M18,11l-3,3 3,3v-2h-4v-2h4V11z"/>
+
+    <!-- 装饰小点（环保主题：修复cx/cy属性，移除android:前缀） -->
+    <circle
+        android:fillColor="#8BC34A"
+        cx="7"
+        cy="17"
+        r="1"/>
+    <circle
+        android:fillColor="#8BC34A"
+        cx="17"
+        cy="7"
+        r="1"/>
+</vector>
