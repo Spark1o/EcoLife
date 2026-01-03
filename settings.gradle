@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+        // 1. 在pluginManagement中添加JitPack（插件仓库）
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // 2. 在dependencyResolutionManagement中添加JitPack（依赖仓库）
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+rootProject.name = "EcoLife"
+include ':app'
